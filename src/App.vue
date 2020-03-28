@@ -1,92 +1,80 @@
 <template>
   <v-app>
-    <v-speed-dial
-      v-model="fab"
-      :top="top"
-      :bottom="bottom"
-      :right="right"
-      :left="left"
-      :direction="direction"
-      :open-on-hover="hover"
-      :transition="transition"
-    >
-      <template v-slot:activator>
-        <v-btn v-model="fab" color="blue darken-2" dark fab id="burger-outer">
-          <div class="burger">
-            <div id="line1"></div>
-            <div id="line2"></div>
-            <div id="line3"></div>
-          </div>
-        </v-btn>
-      </template>
-      <a href="#home" v-smooth-scroll>
-        <v-btn fab dark small color="yellow">
-          <v-icon>mdi-pencil</v-icon>
-        </v-btn>
-      </a>
-      <a href="#video" v-smooth-scroll>
-        <v-btn fab dark small color="green">
-          <v-icon>mdi-pencil</v-icon>
-        </v-btn>
-      </a>
-      <a href="#projects" v-smooth-scroll>
-        <v-btn fab dark small color="indigo">
-          <v-icon>mdi-plus</v-icon>
-        </v-btn>
-      </a>
-      <a href="#contact" v-smooth-scroll>
-        <v-btn fab dark small color="red">
-          <v-icon>mdi-delete</v-icon>
-        </v-btn>
-      </a>
-    </v-speed-dial>
-    <div class="outer-wrapper">
-      <div class="wrapper">
-        <div class="slide one" id="home"></div>
-        <div class="slide two" id="video">
-          <v-lazy
-            v-model="isActive"
-            :options="{
+    <v-card>
+      <v-tabs vertical fixed-tabs background-color="indigo" dark>
+        <v-tab>Home</v-tab>
+        <v-tab>Video</v-tab>
+        <v-tab>Projects</v-tab>
+        <v-tab>Contact</v-tab>
+        <v-tab-item>
+          <v-card flat height="100vh" class="page one">
+            <v-card-text>
+              <p>Sed aliquam ultrices mauris. Donec posuere vulputate arcu. Morbi ac felis. Etiam feugiat lorem non metus. Sed a libero.</p>
+
+              <p>Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Aliquam lobortis. Aliquam lobortis. Suspendisse non nisl sit amet velit hendrerit rutrum.</p>
+
+              <p
+                class="mb-0"
+              >Phasellus dolor. Fusce neque. Fusce fermentum odio nec arcu. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam. Phasellus blandit leo ut odio.</p>
+            </v-card-text>
+          </v-card>
+        </v-tab-item>
+        <v-tab-item>
+          <v-card flat height="100vh" class="page two" color="green darken-1">
+            <v-card-text>
+              <p>Morbi nec metus. Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Nunc sed turpis.</p>
+
+              <p>Suspendisse feugiat. Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. In hac habitasse platea dictumst. Fusce ac felis sit amet ligula pharetra condimentum.</p>
+
+              <p>Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Nam commodo suscipit quam. In consectetuer turpis ut velit. Sed cursus turpis vitae tortor. Aliquam eu nunc.</p>
+
+              <p>Etiam ut purus mattis mauris sodales aliquam. Ut varius tincidunt libero. Aenean viverra rhoncus pede. Duis leo. Fusce fermentum odio nec arcu.</p>
+
+              <p
+                class="mb-0"
+              >Donec venenatis vulputate lorem. Aenean viverra rhoncus pede. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Fusce commodo aliquam arcu. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi.</p>
+            </v-card-text>
+          </v-card>
+        </v-tab-item>
+        <v-tab-item>
+          <v-card flat height="100vh" class="page three">
+            <v-card-text>
+              <p>Fusce a quam. Phasellus nec sem in justo pellentesque facilisis. Nam eget dui. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. In dui magna, posuere eget, vestibulum et, tempor auctor, justo.</p>
+
+              <p
+                class="mb-0"
+              >Cras sagittis. Phasellus nec sem in justo pellentesque facilisis. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nam at tortor in tellus interdum sagittis.</p>
+            </v-card-text>
+          </v-card>
+        </v-tab-item>
+        <v-tab-item>
+          <v-card flat height="100vh" class="page four">
+            <v-card-text>
+              <v-lazy
+                v-model="isActive"
+                :options="{
               threshold: 0.5
             }"
-            min-height="200"
-            transition="fade-transition"
-          >
-            <v-card class="mx-auto" max-width="336">
-              <v-card-title>Card title</v-card-title>
+                min-height="200"
+                transition="fade-transition"
+              >
+                <p>zxcvxzcvzxcvFusce a quam. Phasellus nec sem in justo pellentesque facilisis. Nam eget dui. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. In dui magna, posuere eget, vestibulum et, tempor auctor, justo.</p>
 
-              <v-card-text>
-                Phasellus magna. Quisque rutrum. Nunc egestas, augue at
-                pellentesque laoreet, felis eros vehicula leo, at malesuada
-                velit leo quis pede. Aliquam lobortis. Quisque libero metus,
-                condimentum nec, tempor a, commodo mollis, magna. In turpis. In
-                dui magna, posuere eget, vestibulum et, tempor auctor, justo. In
-                turpis. Pellentesque dapibus hendrerit tortor. Ut varius
-                tincidunt libero.
-              </v-card-text>
-            </v-card>
-          </v-lazy>
-        </div>
-        <div class="slide three" id="projects"></div>
-        <div class="slide four" id="contact"></div>
-      </div>
-    </div>
+                <p
+                  class="mb-0"
+                >Cras sagittis. Phasellus nec sem in justo pellentesque facilisis. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nam at tortor in tellus interdum sagittis.</p>
+              </v-lazy>
+            </v-card-text>
+          </v-card>
+        </v-tab-item>
+      </v-tabs>
+    </v-card>
   </v-app>
 </template>
 
 <script>
 export default {
   data: () => ({
-    direction: 'bottom',
-    fab: false,
-    fling: false,
-    hover: false,
-    tabs: null,
-    top: true,
-    right: false,
-    bottom: false,
-    left: true,
-    transition: 'slide-x-transition',
     isActive: false
   })
 };
@@ -99,10 +87,6 @@ export default {
 }
 ::-webkit-scrollbar {
   display: none;
-}
-
-a {
-  text-decoration: none;
 }
 
 .burger {
@@ -133,30 +117,6 @@ a {
 #burger-outer:hover #line3 {
   width: 15px;
   transition-duration: 90ms;
-}
-
-.slide {
-  width: 100vw;
-  height: 100vh;
-}
-
-.outer-wrapper {
-  width: 100vh;
-  height: 100vw;
-  transform: rotate(-90deg) translateX(-100vh);
-  transform-origin: top left;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  position: absolute;
-  z-index: 0;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  width: 400vw;
-  transform: rotate(90deg) translateY(-100vh);
-  transform-origin: top left;
 }
 
 .one {
