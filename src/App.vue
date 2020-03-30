@@ -7,7 +7,7 @@
         <v-tab>Projects</v-tab>
         <v-tab>Contact</v-tab>
         <v-tab-item>
-          <v-card flat height="200vh" class="page one">
+          <v-card flat height="100vh" class="page one">
             <v-card-text>
               <p>Sed aliquam ultrices mauris. Donec posuere vulputate arcu. Morbi ac felis. Etiam feugiat lorem non metus. Sed a libero.</p>
 
