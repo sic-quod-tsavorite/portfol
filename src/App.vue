@@ -7,7 +7,7 @@
         <v-tab>Projects</v-tab>
         <v-tab>Contact</v-tab>
         <v-tab-item>
-          <v-card flat height="100vh" class="page one">
+          <v-card flat height="200vh" class="page one">
             <v-card-text>
               <p>Sed aliquam ultrices mauris. Donec posuere vulputate arcu. Morbi ac felis. Etiam feugiat lorem non metus. Sed a libero.</p>
 
@@ -81,12 +81,27 @@ export default {
 </script>
 
 <style>
+/*
 * {
   scrollbar-width: none;
   -ms-overflow-style: none;
-}
+}*/
 ::-webkit-scrollbar {
-  display: none;
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px grey;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: rgb(0, 1, 59);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #170099;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5661ff;
 }
 
 .burger {
