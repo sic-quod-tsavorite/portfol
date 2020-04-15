@@ -78,7 +78,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 * {
   scrollbar-width: none;
   -ms-overflow-style: none;
