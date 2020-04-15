@@ -8,13 +8,10 @@
       <v-tab-item>
         <v-card flat height="100vh" class="page one">
           <v-card-text>
-            <p>Sed aliquam ultrices mauris. Donec posuere vulputate arcu. Morbi ac felis. Etiam feugiat lorem non metus. Sed a libero.</p>
-
-            <p>Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Aliquam lobortis. Aliquam lobortis. Suspendisse non nisl sit amet velit hendrerit rutrum.</p>
-
-            <p
-              class="mb-0"
-            >Phasellus dolor. Fusce neque. Fusce fermentum odio nec arcu. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam. Phasellus blandit leo ut odio.</p>
+            <div class="container">
+              <span class="fName">Martin</span>
+              <span class="sName">Sørensen</span>
+            </div>
           </v-card-text>
         </v-card>
       </v-tab-item>
@@ -145,5 +142,55 @@ export default {
 }
 .four {
   background: darkgreen;
+}
+
+.container {
+  text-align: center;
+  margin-top: 15%;
+  span {
+    display: block;
+  }
+}
+
+.fName {
+  color: white;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  animation: fText 3s 1;
+}
+.sName {
+  font-size: 30px;
+  color: black;
+  animation: sText 3s 1;
+}
+
+@keyframes fText {
+  0% {
+    color: black;
+    margin-bottom: -40px;
+    opacity: 0%;
+  }
+  30% {
+    letter-spacing: 25px;
+    margin-bottom: -40px;
+    opacity: 100%;
+  }
+  85% {
+    letter-spacing: 8px;
+    margin-bottom: -40;
+  }
+}
+@keyframes sText {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 </style>
