@@ -20,7 +20,7 @@
             </div>
             <v-img
               id="meLogo"
-              src="https://cdn.discordapp.com/attachments/294221981455220737/707523986795397172/mig-vhs-edit-smol-800-800.png"
+              src="https://storage.googleapis.com/martinportfolio/items/mig-vhs-edit-smol-800-800.png"
             ></v-img>
             <h1 class="welcometxt" data-text="Welcome to my portfolio">Welcome to my portfolio</h1>
           </v-card-text>
@@ -32,78 +32,50 @@
             <v-container id="p2cont">
               <h1>Video Projects</h1>
               <v-row justify="space-around">
-                <v-lazy
-                  v-model="isActive"
-                  :options="{threshold: 0.5}"
-                  min-height="200"
-                  transition="fade-transition"
-                >
-                  <div id="videos">
-                    <h2>Animation project</h2>
-                    <iframe
-                      width="600"
-                      height="315"
-                      src="https://www.youtube.com/embed/rCxzlAfkGBI"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </v-lazy>
-                <v-lazy
-                  v-model="isActive"
-                  :options="{threshold: 0.5}"
-                  min-height="200"
-                  transition="fade-transition"
-                >
-                  <div id="videos">
-                    <h2>Video project made with short time limit</h2>
-                    <iframe
-                      width="600"
-                      height="315"
-                      src="https://www.youtube.com/embed/VaDvrAkslCk"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </v-lazy>
-                <v-lazy
-                  v-model="isActive"
-                  :options="{threshold: 0.5}"
-                  min-height="200"
-                  transition="fade-transition"
-                >
-                  <div id="videos">
-                    <h2>Promotion project for Fanø CMS</h2>
-                    <iframe
-                      width="600"
-                      height="315"
-                      src="https://www.youtube.com/embed/zuGXpow5d6A"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </v-lazy>
-                <v-lazy
-                  v-model="isActive"
-                  :options="{threshold: 0.5}"
-                  min-height="200"
-                  transition="fade-transition"
-                >
-                  <div id="videos">
-                    <h2>Made up internet commercial project</h2>
-                    <iframe
-                      width="600"
-                      height="315"
-                      src="https://www.youtube.com/embed/aMF6Mrzyy04"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                    ></iframe>
-                  </div>
-                </v-lazy>
+                <div id="videos">
+                  <h2>Animation project</h2>
+                  <iframe
+                    width="600"
+                    height="315"
+                    src="https://www.youtube.com/embed/rCxzlAfkGBI"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div id="videos">
+                  <h2>Video project made with short time limit</h2>
+                  <iframe
+                    width="600"
+                    height="315"
+                    src="https://www.youtube.com/embed/VaDvrAkslCk"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div id="videos">
+                  <h2>Promotion project for Fanø CMS</h2>
+                  <iframe
+                    width="600"
+                    height="315"
+                    src="https://www.youtube.com/embed/zuGXpow5d6A"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div id="videos">
+                  <h2>Made up internet commercial project</h2>
+                  <iframe
+                    width="600"
+                    height="315"
+                    src="https://www.youtube.com/embed/aMF6Mrzyy04"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               </v-row>
             </v-container>
           </v-card-text>
@@ -123,19 +95,19 @@
                     <h2>Website exam project, Subject: Space</h2>
                     <v-img
                       id="projectimg"
-                      src="https://cdn.discordapp.com/attachments/294221981455220737/707665938614583326/1UVua5uZ5CE-c_PzBYtn76KlZQYyxz9qPr871oJw.png"
+                      src="https://storage.googleapis.com/martinportfolio/items/simplehistory.png"
                     ></v-img>
                   </a>
                 </div>
                 <div id="projects">
                   <a
-                    href="https://cdn.discordapp.com/attachments/294221981455220737/707685567126569010/GERALT_-_SHEPARD_FAIREY.png"
+                    href="https://storage.googleapis.com/martinportfolio/items/GERALT%20-%20SHEPARD%20FAIREY.png"
                     target="_blank"
                   >
                     <h2>Image in the style of Shepard Fairey</h2>
                     <v-img
                       id="projectimg"
-                      src="https://cdn.discordapp.com/attachments/294221981455220737/707685567126569010/GERALT_-_SHEPARD_FAIREY.png"
+                      src="https://storage.googleapis.com/martinportfolio/items/GERALT%20-%20SHEPARD%20FAIREY.png"
                     ></v-img>
                   </a>
                 </div>
@@ -164,14 +136,14 @@
                 <v-col class="text-center" id="p4col2">
                   <h1>My CV</h1>
                   <v-btn
-                    href="https://docs.google.com/gview?url=https://cdn.discordapp.com/attachments/294221981455220737/707560387150610502/martin_s_cv_only.pdf&embedded=true"
+                    href="https://storage.googleapis.com/martinportfolio/items/martin%20s%20cv%20only.pdf"
                     large
                     target="_blank"
                     id="p4btn"
                   >Click to open</v-btn>
                   <h1>My bussiness card</h1>
                   <v-btn
-                    href="https://docs.google.com/gview?url=https://cdn.discordapp.com/attachments/294221981455220737/707560381991747644/martin_s_card_only.pdf&embedded=true"
+                    href="https://storage.googleapis.com/martinportfolio/items/martin%20s%20card%20only.pdf"
                     large
                     target="_blank"
                     id="p4btn"
@@ -216,7 +188,7 @@ export default {
 
 #page1 {
   background-color: $almostWhite;
-  background-image: url(https://cdn.discordapp.com/attachments/294221981455220737/707548895332401243/p1bg.svg);
+  background-image: url(https://storage.googleapis.com/martinportfolio/items/p1bg.svg);
   background-size: 95vw;
   animation: circleLoad 1s 1;
 }
@@ -502,7 +474,7 @@ export default {
 
 #page3 {
   background: $cDark;
-  background-image: url(https://cdn.discordapp.com/attachments/294221981455220737/707714623285100574/bcircle1.svg);
+  background-image: url(https://storage.googleapis.com/martinportfolio/items/bcircle1.svg);
   background-size: 105vh;
   background-position: center;
   background-position-y: -80vh;
@@ -564,7 +536,7 @@ export default {
 
 #page4 {
   background: $almostWhite;
-  background-image: url(https://cdn.discordapp.com/attachments/294221981455220737/707714623285100574/bcircle1.svg);
+  background-image: url(https://storage.googleapis.com/martinportfolio/items/bcircle1.svg);
   background-size: 70%;
   background-repeat: no-repeat;
   background-position-x: 45vw;
