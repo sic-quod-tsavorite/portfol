@@ -1,12 +1,12 @@
 <template>
   <v-card>
-    <v-tabs vertical fixed-tabs background-color="$cDark" dark>
+    <v-tabs vertical fixed-tabs background-color="$cDark" dark height="100vh">
       <v-tab>Home</v-tab>
       <v-tab>Videos</v-tab>
       <v-tab>Projects</v-tab>
       <v-tab>About Me</v-tab>
       <v-tab-item>
-        <v-card flat height="100vh" class="page one" id="page1">
+        <v-card flat min-height="100vh" height="100%" class="page one" id="page1">
           <v-card-text>
             <div class="container">
               <span class="fName">Martin</span>
@@ -27,11 +27,11 @@
         </v-card>
       </v-tab-item>
       <v-tab-item>
-        <v-card flat height="100vh" class="page two" id="page2">
+        <v-card flat min-height="100vh" height="100%" class="page two" id="page2">
           <v-card-text>
-            <v-container>
+            <v-container id="p2cont">
               <h1>Video Projects</h1>
-              <v-row justify="space-between">
+              <v-row justify="space-around">
                 <v-lazy
                   v-model="isActive"
                   :options="{threshold: 0.5}"
@@ -41,7 +41,7 @@
                   <div id="videos">
                     <h2>Animation project</h2>
                     <iframe
-                      width="560"
+                      width="600"
                       height="315"
                       src="https://www.youtube.com/embed/rCxzlAfkGBI"
                       frameborder="0"
@@ -59,7 +59,7 @@
                   <div id="videos">
                     <h2>Video project made with short time limit</h2>
                     <iframe
-                      width="560"
+                      width="600"
                       height="315"
                       src="https://www.youtube.com/embed/VaDvrAkslCk"
                       frameborder="0"
@@ -77,7 +77,7 @@
                   <div id="videos">
                     <h2>Promotion project for Fanø CMS</h2>
                     <iframe
-                      width="560"
+                      width="600"
                       height="315"
                       src="https://www.youtube.com/embed/zuGXpow5d6A"
                       frameborder="0"
@@ -95,7 +95,7 @@
                   <div id="videos">
                     <h2>Made up internet commercial project</h2>
                     <iframe
-                      width="560"
+                      width="600"
                       height="315"
                       src="https://www.youtube.com/embed/aMF6Mrzyy04"
                       frameborder="0"
@@ -110,14 +110,14 @@
         </v-card>
       </v-tab-item>
       <v-tab-item>
-        <v-card flat height="100vh" class="page three" id="page3">
+        <v-card flat min-height="100vh" height="100%" class="page three" id="page3">
           <v-card-text>
-            <v-container>
+            <v-container id="p3cont">
               <h1>
                 Other Projects
                 <br />Click to open in new tab
               </h1>
-              <v-row justify="space-between">
+              <v-row justify="space-around">
                 <div id="projects">
                   <a href="http://www.simplehistory.top/" target="_blank">
                     <h2>Website exam project, Subject: Space</h2>
@@ -145,30 +145,51 @@
         </v-card>
       </v-tab-item>
       <v-tab-item>
-        <v-card flat height="100vh" class="page four" id="page4">
+        <v-card flat min-height="100vh" height="100%" class="page four" id="page4">
           <v-card-text>
-            <v-tabs>
-              <v-tab>CV</v-tab>
-              <v-tab>Card</v-tab>
-              <v-tab-item>
-                <iframe
-                  src="https://docs.google.com/gview?url=https://cdn.discordapp.com/attachments/294221981455220737/707560387150610502/martin_s_cv_only.pdf&embedded=true"
-                  style="width:40%; height:90vh;"
-                  frameborder="1"
-                >CV</iframe>
-                <a
-                  href="https://docs.google.com/gview?url=https://cdn.discordapp.com/attachments/294221981455220737/707560387150610502/martin_s_cv_only.pdf&embedded=true"
-                  target="_blank"
-                >cv</a>
-              </v-tab-item>
-              <v-tab-item>
-                <iframe
-                  src="https://docs.google.com/gview?url=https://cdn.discordapp.com/attachments/294221981455220737/707560381991747644/martin_s_card_only.pdf&embedded=true"
-                  style="width:40%; height:90vh;"
-                  frameborder="1"
-                >Card</iframe>
-              </v-tab-item>
-            </v-tabs>
+            <v-containor>
+              <v-row>
+                <v-col>
+                  <h1>Contact Info</h1>
+                  <v-card id="p4card" max-width="70%">
+                    <br />Email: mart412f@easv365
+                    <br />LinkedIn:
+                    <a
+                      href="https://www.linkedin.com/in/martin--s%C3%B8rensen/"
+                    >@martin--sørensen</a>
+                    <br />
+                    <br />
+                  </v-card>
+                </v-col>
+                <v-col class="text-center" id="p4col2">
+                  <h1>My CV</h1>
+                  <v-btn
+                    href="https://docs.google.com/gview?url=https://cdn.discordapp.com/attachments/294221981455220737/707560387150610502/martin_s_cv_only.pdf&embedded=true"
+                    large
+                    target="_blank"
+                    id="p4btn"
+                  >Click to open</v-btn>
+                  <h1>My bussiness card</h1>
+                  <v-btn
+                    href="https://docs.google.com/gview?url=https://cdn.discordapp.com/attachments/294221981455220737/707560381991747644/martin_s_card_only.pdf&embedded=true"
+                    large
+                    target="_blank"
+                    id="p4btn"
+                  >Click to open</v-btn>
+                  <h1>My Video CV</h1>
+                  <div>
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/qSQsz0ykWZI"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </v-col>
+              </v-row>
+            </v-containor>
           </v-card-text>
         </v-card>
       </v-tab-item>
@@ -222,9 +243,9 @@ export default {
 }
 
 #meLogo {
-  position: fixed;
   top: 10%;
   right: 10%;
+  position: absolute;
   height: 500px;
   width: 500px;
   transition: 0.5s;
@@ -232,9 +253,7 @@ export default {
 }
 #meLogo:hover {
   transition: 0.5s;
-  height: 550px;
-  width: 550px;
-  margin: -25px -25px auto auto;
+  transform: scale(1.1);
 }
 
 #boutMe {
@@ -250,9 +269,10 @@ export default {
   position: absolute;
   font-family: "Open Sans", sans-serif;
   bottom: 10%;
-  right: -22%;
+  right: -20vw;
+  line-break: none;
   transform: translate(-50%, -50%);
-  font-size: 6em;
+  font-size: 600%;
   color: $cTextdark;
   text-shadow: 0 0 20px $cRed;
   z-index: 4;
@@ -319,12 +339,10 @@ export default {
   from {
     height: 0px;
     width: 0px;
-    margin: 250px 250px auto auto;
   }
   to {
     height: 500px;
     width: 500px;
-    margin: 0;
   }
 }
 @keyframes meTextLoad {
@@ -348,8 +366,88 @@ export default {
     right: 0;
   }
   to {
-    font-size: 6em;
+    font-size: 600%;
     right: -22%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .welcometxt {
+    right: -30vw;
+  }
+  @keyframes welLoad {
+    from {
+      font-size: 0;
+      right: 0;
+    }
+    to {
+      font-size: 600%;
+      right: -30vw;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #meLogo {
+    top: 10%;
+    right: 10%;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+  }
+  .welcometxt {
+    font-size: 500%;
+  }
+  @keyframes meImgLoad {
+    from {
+      height: 0px;
+      width: 0px;
+    }
+    to {
+      height: 200px;
+      width: 200px;
+    }
+  }
+  @keyframes welLoad {
+    from {
+      font-size: 0;
+      right: 0;
+    }
+    to {
+      font-size: 500%;
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  #meLogo {
+    top: 40%;
+    right: 10%;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+  }
+  .welcometxt {
+    font-size: 300%;
+  }
+  @keyframes meImgLoad {
+    from {
+      height: 0px;
+      width: 0px;
+    }
+    to {
+      height: 300px;
+      width: 300px;
+    }
+  }
+  @keyframes welLoad {
+    from {
+      font-size: 0;
+      right: 0;
+    }
+    to {
+      font-size: 300%;
+    }
   }
 }
 
@@ -357,9 +455,14 @@ export default {
   background: $cRed;
   h1 {
     text-align: center;
-    margin: -100px auto 100px auto;
+    margin-bottom: 100px;
     color: $cTextdark;
+    font-family: "Open Sans", sans-serif;
   }
+}
+
+#p2cont {
+  margin-top: 3%;
 }
 
 #videos {
@@ -400,7 +503,7 @@ export default {
 #page3 {
   background: $cDark;
   background-image: url(https://cdn.discordapp.com/attachments/294221981455220737/707714623285100574/bcircle1.svg);
-  background-size: 60%;
+  background-size: 105vh;
   background-position: center;
   background-position-y: -80vh;
   background-repeat: no-repeat;
@@ -410,6 +513,7 @@ export default {
     margin: -100px auto 100px auto;
     color: $cTextdark;
     line-height: 25px;
+    font-family: "Open Sans", sans-serif;
   }
 }
 
@@ -445,14 +549,58 @@ export default {
 
 @keyframes bcirani {
   from {
-    background-size: 40%;
+    background-size: 70vh;
   }
   to {
-    background-size: 60%;
+    background-size: 105vh;
+  }
+}
+
+@media (max-width: 870px) {
+  #p3cont {
+    padding-top: 10vh;
   }
 }
 
 #page4 {
-  //background: darkgreen;
+  background: $almostWhite;
+  background-image: url(https://cdn.discordapp.com/attachments/294221981455220737/707714623285100574/bcircle1.svg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position-x: 45vw;
+  background-position-y: -10vh;
+  animation: p4cirbg 3s 1;
+  h1 {
+    text-align: center;
+    margin: 10px auto;
+  }
+}
+
+#p4card {
+  padding: 10px;
+  font-size: 250%;
+  line-height: 125%;
+  margin: 10% 15% auto auto;
+}
+
+#p4col2 {
+  padding-top: 10%;
+}
+
+#p4btn {
+  margin-bottom: 15px;
+}
+
+@keyframes p4cirbg {
+  0% {
+    background-size: 0;
+    background-position-x: 100vw;
+    background-position-y: 100vh;
+  }
+  100% {
+    background-size: 70%;
+    background-position-x: 45vw;
+    background-position-y: -10vh;
+  }
 }
 </style>
