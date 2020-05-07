@@ -124,7 +124,7 @@
                 <v-col>
                   <h1>Contact Info</h1>
                   <v-card id="p4card" max-width="70%">
-                    <br />Email: mart412f@easv365
+                    <br />Email: mart412f@easv365.dk
                     <br />LinkedIn:
                     <a
                       href="https://www.linkedin.com/in/martin--s%C3%B8rensen/"
