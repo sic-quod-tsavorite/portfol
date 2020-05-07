@@ -229,7 +229,6 @@ export default {
 }
 
 #boutMe {
-  opacity: 100%;
   animation: meTextLoad 2s 1;
   font-size: 30px;
   padding: 10px;
@@ -319,17 +318,13 @@ export default {
 }
 @keyframes meTextLoad {
   0% {
-    opacity: 0%;
-  }
-  50% {
-    margin-left: -200px;
+    transform: scale(0);
   }
   80% {
-    opacity: 0%;
+    transform: scale(0.01);
   }
   100% {
-    opacity: 100%;
-    margin-left: 0px;
+    transform: scale(1);
   }
 }
 @keyframes welLoad {
@@ -339,7 +334,7 @@ export default {
   }
   to {
     font-size: 600%;
-    right: -22%;
+    right: -20vw;
   }
 }
 
