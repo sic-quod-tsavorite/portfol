@@ -6,7 +6,7 @@
       <v-tab>Projects</v-tab>
       <v-tab>About Me</v-tab>
       <v-tab-item>
-        <v-card flat min-height="100vh" height="100%" class="page one" id="page1">
+        <v-card flat min-height="100vh" height="100%" id="page1">
           <v-card-text>
             <div class="container">
               <span class="fName">Martin</span>
@@ -27,7 +27,7 @@
         </v-card>
       </v-tab-item>
       <v-tab-item>
-        <v-card flat min-height="100vh" height="100%" class="page two" id="page2">
+        <v-card flat min-height="100vh" height="100%" id="page2">
           <v-card-text>
             <v-container id="p2cont">
               <h1>Video Projects</h1>
@@ -82,7 +82,7 @@
         </v-card>
       </v-tab-item>
       <v-tab-item>
-        <v-card flat min-height="100vh" height="100%" class="page three" id="page3">
+        <v-card flat min-height="100vh" height="100%" id="page3">
           <v-card-text>
             <v-container id="p3cont">
               <h1>
@@ -117,7 +117,7 @@
         </v-card>
       </v-tab-item>
       <v-tab-item>
-        <v-card flat min-height="100vh" height="100%" class="page four" id="page4">
+        <v-card flat min-height="100vh" height="100%" id="page4">
           <v-card-text>
             <v-containor>
               <v-row>
@@ -178,6 +178,8 @@ export default {
 </script>
 
 <style lang="scss">
+// not sure why, men keyframe animations virker ikke med opacity efter jeg builder i vue.
+
 * {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -444,25 +446,25 @@ export default {
 
 @keyframes vidLoad {
   0% {
-    opacity: 0%;
+    transform: scale(0);
     margin-top: -50px;
   }
   100% {
-    opacity: 100%;
+    transform: scale(1);
     margin-top: 0;
   }
 }
 @keyframes vidtxtLoad {
   0% {
-    opacity: 0%;
+    transform: scale(0);
     margin-left: -50px;
   }
   40% {
-    opacity: 0%;
+    transform: scale(0);
     margin-left: -50px;
   }
   100% {
-    opacity: 100%;
+    transform: scale(1);
     margin-left: 0;
   }
 }
