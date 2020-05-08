@@ -285,12 +285,12 @@ export default {
   0% {
     color: $cTextdark;
     margin-bottom: -40px;
-    opacity: 0%;
+    transform: scale(0);
   }
   30% {
     letter-spacing: 25px;
     margin-bottom: -40px;
-    opacity: 100%;
+    transform: scale(1);
   }
   85% {
     letter-spacing: 8px;
@@ -299,13 +299,13 @@ export default {
 }
 @keyframes sText {
   0% {
-    opacity: 0%;
+    transform: scale(0);
   }
   50% {
-    opacity: 0%;
+    transform: scale(0);
   }
   100% {
-    opacity: 100%;
+    transform: scale(1);
   }
 }
 @keyframes meImgLoad {
